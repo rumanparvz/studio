@@ -18,13 +18,13 @@
 		<div class="row"> 
 			
 			<div class="col-md-4"> 
-					<p class="lead ban">আপনি কি চাকুরী করতে চান ?</p>
-					<p class="lead ban">তাহল আমাদের সাথে যোগাযোগ করুন </p>
+					<p class="lead ban"> দ্রুত চাকরি আবেদন করতে</p>
+					<p class="lead ban"> সিভিটি পূরণ করুন</p>
 
 				</div>
 				<div class="col-md-4"></div>
 			<div class="col-md-4"> 
-					<p class="lead ban"> হটলাইন নাম্বার </p>
+					<p class="lead ban"> হটলাইন নাম্বার</p>
 					<p class="lead eng"> 01732946891</p>
 				</div>		
 		</div>
@@ -35,18 +35,18 @@
 <div class="container"> 
 		<a class="navbar-brand" href="#Home">
 		
-		<h3 class="d-inline text-dark align-middle ban"> লগো  </h3> </a>		
+		<h3 class="d-inline text-dark align-middle ban"> লগো  </h3> </a>		
 	<button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-item" > <span class="navbar-toggler-icon" > </span></button>
 	<div class="collapse navbar-collapse" id="navbar-item"> 	
 		<ul class="navbar-nav ml-auto"> 
 	<li class="nav-item">
-		<a class="nav-link ban" href="#Home">হোম</a>
+		<a class="nav-link ban" href="#Home">হোম</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link ban" href="applicationFrom.php">চাকুরী</a>
+		<a class="nav-link ban" href="applicationFrom.php">চাকুরি</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link ban" href="#about-sec">আবেদন করুন </a>
+		<a class="nav-link ban" href="#about-sec">আবেদন করুন</a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link ban" hrefz="#Meet-the-authors">ব্লগ</a>
@@ -55,7 +55,7 @@
 		<a class="nav-link ban" href="#contact">সিভি/লগইন</a>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link ban" href="#contact">যোগাযোগ</a>
+		<a class="nav-link ban" href="#contact">যোগাযোগ</a>
 	</li>
 </ul>
 	</div>
@@ -172,7 +172,7 @@
         <h5 class="eng"> Gender :<span class="red" >*</span> </h5>
       </div>
 
-    <div class="col-md-2">  
+    <div class="col-md-1">  
     <div class="form-check">
           <input class="form-check-input" type="radio" name="gender" id="male" value="option1" required>
           <label class="form-check-label eng" for="male">
@@ -181,7 +181,7 @@
         </div>
     </div>
 
-    <div class="col-md-2">  
+    <div class="col-md-1">  
     <div class="form-check">
           <input class="form-check-input" type="radio" name="gender" id="female" value="option1" required >
           <label class="form-check-label eng" for="female">
@@ -190,7 +190,7 @@
         </div>
     </div>
 
-    <div class="col-md-2">  
+    <div class="col-md-1">  
     <div class="form-check">
           <input class="form-check-input" type="radio" name="gender" id="others" value="option1" required >
           <label class="form-check-label eng" for="others">
@@ -198,12 +198,12 @@
           </label>
         </div>
     </div>
-
+    <div class="col-md-2"> </div>
  <div class="row pb-4"> 
- <div class="col-md-6"> 
+ <div class="col-md-5"> 
         <h5 class="eng"> Religion :<span class="red" >* </span> </h5>
       </div>
-      <div class="col-md-5">  
+      <div class="col-md-7">  
       <select name="religion" class="form-control" id="religion">
                 <option value="0" selected="selected">নির্বাচন করুন</option>
                 <option value="Islam">ইসলাম</option>
@@ -263,19 +263,22 @@
     <select name="marital" class="form-control " id="rell" require> 
     <option value="0" selected="selected">Select One</option>
     <option id="hello" value="01"> Married </option>
-    <option value="02"> Single</option>
+    <option id="single" value="02"> Single</option>
     </select>
-   
+    <div id="myDIV" style="margin-top:10px; display:none"><label for="college_name"></lable><input name="wife_name" class="form-control" type="text" placeholder="স্ত্রীর নাম"></div>
   </div>
 </div>
 <script type="text/javascript">
-     $(document).ready(function(){
-         $("#hello").click(function(){
-            
-                 $('#degree').append('<div style="margin-top:10px;"><label for="college_name"></lable><input name="wife_name" class="form-control" type="text" placeholder="স্ত্রীর নাম" require></div>');
-         });
-     });
- </script>
+$(document).ready(function(){
+  $("#single").click(function(){
+    $("#myDIV").hide();
+  });
+  $("#hello").click(function(){
+    $("#myDIV").show();
+  });
+});
+</script>
+
 
 
 <div class="row pb-3">   
@@ -325,7 +328,7 @@
 
 <div class="row p-4 bg-success"> 
      <div class="col-md-6"> <h5 class="eng pb-3">Mailing/Present Address <span class="red"> *</span> </h5>
-      <div class="row"> 
+      <div class="row mt-4"> 
         <div class="col-md-4"> <h5 class="eng">Care of </h5> </div>
         <div class="col-md-8"> 
         <input id="homeaddress" placeholder="প্রার্থীর অভিভাবকের নাম" type="text" name="homeaddress" class="form-control-md form-control" require></div>
@@ -369,36 +372,36 @@
       <div class="row"> 
         <div class="col-md-4"> <h5 class="eng">Care of </h5> </div>
         <div class="col-md-8"> 
-        <input type="text" id="billingaddress" name="billingaddress" class="form-control-md form-control" require></div>
+        <input type="text" id="billingaddress" placeholder="প্রার্থীর অভিভাবকের নাম"  name="billingaddress" class="form-control-md form-control" require></div>
 
         <div class="col-md-4 mt-3"> 
         <h5 class="eng">Village/Town/road/House/Flat</h5> </div>
         <div class="col-md-8"> 
-      <textarea class="form-control mt-3" name="billingaddress2" id="billingaddress2" cols="15" rows="4"></textarea>
+      <textarea class="form-control mt-3" placeholder="গ্রাম/শহর/রোড/বাড়ি/ফ্লাট" name="billingaddress2" id="billingaddress2" cols="15" rows="4"></textarea>
         </div>
         <div class="col-md-4 mt-3">  
         <h5 class="eng"> District : </h5>
         </div>
         <div class="col-md-8 mt-3"> 
-        <input type="text" id="billingaddress3" name="billingaddress3" class="form-control-md form-control" require></div>
+        <input type="text" placeholder="জেলা" id="billingaddress3" name="billingaddress3" class="form-control-md form-control" require></div>
         
         <div class="col-md-4 mt-3">  
         <h5 class="eng"> P.S/Upazila : </h5>
         </div>
         <div class="col-md-8 mt-3"> 
-        <input type="text" id="billingaddress4" name="upzila_b" class="form-control-md form-control" require></div>
+        <input type="text" id="billingaddress4" placeholder="উপজেলা" name="upzila_b" class="form-control-md form-control" require></div>
 
         <div class="col-md-4 mt-3">  
         <h5 class="eng"> Post Office : </h5>
         </div>
         <div class="col-md-8 mt-3"> 
-        <input type="text" id="billingaddress5" name="Post_officeb" class="form-control-md form-control" require></div>
+        <input type="text" id="billingaddress5" placeholder="পোষ্ট-অফিস" name="Post_officeb" class="form-control-md form-control" require></div>
 
         <div class="col-md-4 mt-3">  
         <h5 class="eng"> Post Code : </h5>
         </div>
         <div class="col-md-8 mt-3"> 
-        <input type="text" id="billingaddress6" name="Post_codeb" class="form-control-md form-control" require></div>
+        <input type="text" placeholder="পোষ্ট-কোড" id="billingaddress6" name="Post_codeb" class="form-control-md form-control" require></div>
 
       </div>
      </div>
@@ -413,13 +416,10 @@
      <div class="row"> 
        <div class="col-md-6"><h5> Examination</h5> </div>
        <div class="col-md-6"> 
-       <select name="exam1" class="form-control" id="exam1" require>
+       <select name="exam1" class="form-control" id="exam1" >
                             <option value="0" selected="selected">Select One</option>
-                     <option value="1">S.S.C</option>
-                     <option value="2">Dakhil</option>
-                     <option value="3">S.S.C Vocational</option>
-                     <option value="4">O Level/Cambridge</option>
-                     <option value="5">S.S.C Equivalent</option>
+                     <option value="1">JDC</option>
+                     <option value="2">JSC</option>
                           </select>
        </div>
      </div>
@@ -431,8 +431,8 @@
        <div class="col-md-6"> 
        <select name="institute1" class="form-control" id="institute1" require>
                             <option value="0" selected="selected">Select One</option>
-                            <option value="1">Dhaka</option><option value="2">Cumilla</option><option value="3">Rajshahi</option><option value="4">Jashore</option><option value="5">Chittagong</option><option value="6">Barishal</option><option value="7">Sylhet</option><option value="8">Dinajpur</option><option value="9">Madrasah</option><option value="10">Technical</option><option value="15">Cambridge International - IGCE</option><option value="16">Edexcel International</option><option value="17">Bangladesh Technical Education Board (BTEB)</option><option value="20">Others</option>
-                          </select>
+                            <option value="1">Dhaka</option><option value="2">Cumilla</option><option value="3">Rajshahi</option><option value="4">Jashore</option><option value="5">Chittagong</option><option value="6">Barishal</option><option value="7">Sylhet</option><option value="8">Dinajpur</option><option value="9">Madrasah</option>
+                            </select>
        </div>
      </div>
 
@@ -441,7 +441,7 @@
 <div class="row"> 
        <div class="col-md-6"><h5> Roll No</h5> </div>
        <div class="col-md-6"> 
-         <input class="form-control form-control-md" type="text" require>
+         <input class="form-control form-control-md" type="text" >
        </div>
      </div>
 
@@ -453,7 +453,7 @@
     <div class="col-md-6"> 
       <select name="subject1" class="form-control" id="subject1">
         <option value="0"selected="selected">Select One</option>
-        <option value="1">Science</option><option value="2">Humanities</option><option value="3">Business Studies</option><option value="12">Agriculture Technology</option><option value="13">Architecture and Interior Design Technology</option><option value="15">Automobile Technology</option><option value="16">Civil Technology</option><option value="20">Computer Science & Technology</option><option value="21">Chemical Technology</option><option value="22">Electrical Technology</option><option value="23">Data Telecommunication and Network Technology</option><option value="24">Electrical and Electronics Technology</option><option value="27">Environmental Technology</option><option value="31">Instrumentation & Process Control Technology</option><option value="32">Mechanical Technology</option><option value="34">Mechatronics Technology</option><option value="36">Power Technology</option><option value="38">Refregeration & Air Conditioning Technology</option><option value="41">Telecommunication Technology</option><option value="42">Electronics Technology</option><option value="43">Library Science</option><option value="44">Survey</option><option value="45">General Mechanics</option><option value="46">Firm Machinery</option><option value="47">Textile Technology</option><option value="99">Others</option>
+        <option value="0">Genarel</option>
       </select>
     </div>
   </div>
@@ -469,27 +469,26 @@
     
     <select name="result2" class="form-control" id="result2"  >
                                 <option value="0"selected="selected">Select</option>
-											        	<option value="1">1st Division</option>
-                                <option value="2">2nd Division</option>
-                                <option value="3">3rd Division</option>
-                                <option id="result" value="4">GPA(out of 4)</option>
-											        	<option id="result3" value="5">GPA(out of 5)</option>
-												
+											        	<option class="hide" value="1">1st Division</option>
+                                <option class="hide" value="2">2nd Division</option>
+                                <option class="hide" value="3">3rd Division</option>
+                                <option class="show" id="result" value="4">GPA(out of 4)</option>
+											        	<option class="show" id="result3" value="5">GPA(out of 5)</option>
                               </select>
+                              <div id="gpajsc" style="display: none;margin-top: 10px;"> 
+                                <input type="text"  class="form-control form-control-md">
+                              </div>
      
     </div>
     
     <script type="text/javascript">
-       $(document).ready(function(){
-           $("#result").click(function(){
-              
-                   $('#resultdiv').append('<div style="margin-top:10px;"><label for="college_name"></lable><input name="gpa-4" class="form-control" type="text" placeholder="Gpa" require></div>');
-           });
-           $("#result3").click(function(){
-              
-              $('#resultdiv').append('<div style="margin-top:10px;"><label for="college_name"></lable><input name="gpa-5" class="form-control" type="text" placeholder="Gpa" require></div>');
-      });
-       });
+$(".hide").click(function(){
+  $("#gpajsc").hide(1000);
+});
+
+$(".show").click(function(){
+  $("#gpajsc").show(1000);
+});  
     </script>
   </div>
 </div>
@@ -558,8 +557,7 @@
     <div class="col-md-6"><h5> Group/Subject</h5> </div>
     <div class="col-md-6"> 
       <select name="subject1" class="form-control" id="subject1">
-        <option value="0"selected="selected">Select One</option>
-        <option value="1">Science</option><option value="2">Humanities</option><option value="3">Business Studies</option><option value="12">Agriculture Technology</option><option value="13">Architecture and Interior Design Technology</option><option value="15">Automobile Technology</option><option value="16">Civil Technology</option><option value="20">Computer Science & Technology</option><option value="21">Chemical Technology</option><option value="22">Electrical Technology</option><option value="23">Data Telecommunication and Network Technology</option><option value="24">Electrical and Electronics Technology</option><option value="27">Environmental Technology</option><option value="31">Instrumentation & Process Control Technology</option><option value="32">Mechanical Technology</option><option value="34">Mechatronics Technology</option><option value="36">Power Technology</option><option value="38">Refregeration & Air Conditioning Technology</option><option value="41">Telecommunication Technology</option><option value="42">Electronics Technology</option><option value="43">Library Science</option><option value="44">Survey</option><option value="45">General Mechanics</option><option value="46">Firm Machinery</option><option value="47">Textile Technology</option><option value="99">Others</option>
+        <option value="0"selected="selected">Select One</option><option value="Science">Science</option><option value="Humanities">Humanities</option><option value="Business Studies">Business Studies</option><option value="Agriculture Technology">Agriculture Technology</option><option value="Architecture and Interior Design Technology">Architecture and Interior Design Technology</option><option value="Automobile Technology">Automobile Technology</option><option value="Civil Technology">Civil Technology</option><option value="Computer Science &amp; Technology">Computer Science &amp; Technology</option><option value="Chemical Technology">Chemical Technology</option><option value="Electrical Technology">Electrical Technology</option><option value="Data Telecommunication and Network Technology">Data Telecommunication and Network Technology</option><option value="Electrical and Electronics Technology">Electrical and Electronics Technology</option><option value="Environmental Technology">Environmental Technology</option><option value="Instrumentation &amp; Process Control Technology">Instrumentation &amp; Process Control Technology</option><option value="Mechanical Technology">Mechanical Technology</option><option value="Mechatronics Technology">Mechatronics Technology</option><option value="Power Technology">Power Technology</option><option value="Refregeration &amp; Air Conditioning Technology">Refregeration &amp; Air Conditioning Technology</option><option value="Telecommunication Technology">Telecommunication Technology</option><option value="Electronics Technology">Electronics Technology</option><option value="Library Science">Library Science</option><option value="Survey">Survey</option><option value="General Mechanics">General Mechanics</option><option value="Firm Machinery">Firm Machinery</option><option value="Textile Technology">Textile Technology</option><option value="Others">Others</option>
       </select>
     </div>
   </div>
