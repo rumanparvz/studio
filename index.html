@@ -1005,6 +1005,37 @@ $(".show").click(function(){
 
 </div>
 </body>
+<script type="text/javascript">
+  function setBillingAddress(){
+    if ($("#homepostalcheck").is(":checked")) {
+      $('#billingaddress').val($('#homeaddress').val());
+      $('#billingaddress').attr('disabled', 'disabled');
+      $('#billingaddress2').val($('#homeaddress2').val());
+      $('#billingaddress2').attr('disabled', 'disabled');
+      $('#billingaddress3').val($('#homeaddress3').val());
+      $('#billingaddress3').attr('disabled', 'disabled');
+      $('#billingaddress4').val($('#homeaddress4').val());
+      $('#billingaddress4').attr('disabled', 'disabled');
+      $('#billingaddress5').val($('#homeaddress5').val());
+      $('#billingaddress5').attr('disabled', 'disabled');
+      $('#billingaddress6').val($('#homeaddress6').val());
+      $('#billingaddress6').attr('disabled', 'disabled');
+    } else {
+      $('#billingaddress').removeAttr('disabled');
+      $('#billingaddress2').removeAttr('disabled');
+      $('#billingaddress3').removeAttr('disabled');
+      $('#billingaddress4').removeAttr('disabled');
+      $('#billingaddress5').removeAttr('disabled');
+      $('#billingaddress6').removeAttr('disabled');
+    }
+  }
+  
+  $('#homepostalcheck').click(function(){
+    setBillingAddress();
+  })
+  
+  </script>
+
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </html>
