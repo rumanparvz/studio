@@ -647,7 +647,7 @@ if (point==='four'|| point==='five') {
   function hscexamination(){
       var hsc = document.getElementById('hscexam').value;
 
-    if (hsc==='H.S.C' || hsc==='Alim' || hsc==='Business Management' || hsc==='A Level/Sr. Cambridge' || hsc==='H.S.C Equivalent' || hsc==='others') {
+    if (hsc==='H.S.C' || hsc==='Alim' || hsc==='Business Management' || hsc==='A Level/Sr. Cambridge' || hsc==='H.S.C Equivalent') {
       document.getElementById('hscbox2').innerHTML='<select onclick="option()" id="sub" class="form-control mt-3"><option>Science</option><option>Humanities</option> <option>Bussness Studes</option> <option value="Others">Others</option> </select>'
 
     }else if(hsc==='Diploma Engineering' || hsc==='Diploma in Pharmacy'){
@@ -682,13 +682,22 @@ if (point==='four'|| point==='five') {
   <div class="row"> 
     <div class="col-md-6"><h5> Group/Subject</h5> </div>
     <div class="col-md-6"> 
-      <select name="subject1" class="form-control" id="subject1">
+      <select onchange="newbox()" name="subject1" class="form-control" id="hscsubject">
         <option value="0"selected="selected">Select One</option>
-        <option value="1">Science</option><option value="2">Humanities</option><option value="3">Business Studies</option><option value="12">Agriculture Technology</option><option value="13">Architecture and Interior Design Technology</option><option value="15">Automobile Technology</option><option value="16">Civil Technology</option><option value="20">Computer Science & Technology</option><option value="21">Chemical Technology</option><option value="22">Electrical Technology</option><option value="23">Data Telecommunication and Network Technology</option><option value="24">Electrical and Electronics Technology</option><option value="27">Environmental Technology</option><option value="31">Instrumentation & Process Control Technology</option><option value="32">Mechanical Technology</option><option value="34">Mechatronics Technology</option><option value="36">Power Technology</option><option value="38">Refregeration & Air Conditioning Technology</option><option value="41">Telecommunication Technology</option><option value="42">Electronics Technology</option><option value="43">Library Science</option><option value="44">Survey</option><option value="45">General Mechanics</option><option value="46">Firm Machinery</option><option value="47">Textile Technology</option><option value="99">Others</option>
+        <option value="1">Science</option><option value="2">Humanities</option><option value="3">Business Studies</option><option value="12">Agriculture Technology</option><option value="13">Architecture and Interior Design Technology</option><option value="15">Automobile Technology</option><option value="16">Civil Technology</option><option value="20">Computer Science & Technology</option><option value="21">Chemical Technology</option><option value="22">Electrical Technology</option><option value="23">Data Telecommunication and Network Technology</option><option value="24">Electrical and Electronics Technology</option><option value="27">Environmental Technology</option><option value="31">Instrumentation & Process Control Technology</option><option value="32">Mechanical Technology</option><option value="34">Mechatronics Technology</option><option value="36">Power Technology</option><option value="38">Refregeration & Air Conditioning Technology</option><option value="41">Telecommunication Technology</option><option value="42">Electronics Technology</option><option value="43">Library Science</option><option value="44">Survey</option><option value="45">General Mechanics</option><option value="46">Firm Machinery</option><option value="47">Textile Technology</option><option value="others">Others</option>
       </select>
+      <div id="extra"> </div>
     </div>
   </div>
-
+<script> 
+  function newbox(){
+    var newdiv = document.getElementById('hscsubject').value;
+    if (newdiv==='others') {
+      document.getElementById('extra').innerHTML=' <input class="form-control mt-2" type="text">'
+      
+    }
+  }
+</script>
 </div>
 
 <div class="col-md-4 mt-3"> 
@@ -719,7 +728,7 @@ if (point==='four'|| point==='five') {
 if (point==='four'|| point==='five') {
   document.getElementById('hscpointbox2').innerHTML='<input class="mt-2 form-control" placeholder="জিপিএ নাম্বার" type="text"> '
 }else{
-  document.getElementById('hscpointbox2').innerHTML=''
+  document.getElementById('hscpointbox').innerHTML=''
 }
     }
     </script>
