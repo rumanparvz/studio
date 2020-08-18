@@ -71,7 +71,7 @@
 <!---------copy---------->
 <div class="container p-5 bg-primary"> 
   
-   <form>
+   <form method="POST" action="text.php">
      <div class="row pb-3">  
       <div class="col-md-3"> 
         <h5 class="eng"> Application Name :  <span class="red" >* </span> </h5>
@@ -681,7 +681,7 @@ if (point==='four'|| point==='five') {
       var hsc = document.getElementById('hscexam').value;
 
     if (hsc==='H.S.C' || hsc==='Alim' || hsc==='Business Management' || hsc==='A Level/Sr. Cambridge' || hsc==='H.S.C Equivalent') {
-      document.getElementById('hscsubject').innerHTML='<select onclick="option()" id="sub" class="form-control "><option>Science</option><option>Humanities</option> <option>Bussness Studes</option> <option value="Others">Others</option> </select>'
+      document.getElementById('hscsubject').innerHTML='<select onclick="option()" id="sub" class="form-control "><option>Select One</option><option>Science</option><option>Humanities</option> <option>Bussness Studes</option> <option value="Others">Others</option> </select>'
 
     }else if(hsc==='Diploma Engineering' || hsc==='Diploma in Pharmacy'){
       document.getElementById('hscsubject').innerHTML='<select onchange="newbox()" id="submenu" class="form-control "><option value="Agriculture Technology">Agriculture Technology</option> <option value="Architecture and Interior Design Technology">Architecture and Interior Design Technology</option><option value="Automobile Technology">Automobile Technology</option><option value="Civil Technology">Civil Technology</option><option value="20">Computer Science & Technology</option><option value="21">Chemical Technology</option><option value="22">Electrical Technology</option><option value="23">Data Telecommunication and Network Technology</option><option value="24">Electrical and Electronics Technology</option><option value="27">Environmental Technology</option><option value="31">Instrumentation & Process Control Technology</option><option value="32">Mechanical Technology</option><option value="34">Mechatronics Technology</option><option value="36">Power Technology</option><option value="38">Refregeration & Air Conditioning Technology</option><option value="41">Telecommunication Technology</option><option value="42">Electronics Technology</option><option value="43">Library Science</option><option value="44">Survey</option><option value="45">General Mechanics</option><option value="46">Firm Machinery</option><option value="47">Printing Technology</option><option value="others">Others</option></select>'
@@ -754,23 +754,19 @@ if (point==='four'|| point==='five') {
      <div class="row"> 
        <div class="col-md-6"><h5> Examination</h5> </div>
        <div class="col-md-6"> 
-       <select name="exam1" class="form-control" id="exam1" require>
+       <select name="exam1" onchange="dgree()" class="form-control" id="dgreeid" require>
                       <option value="0" selected="selected">Select One</option>
-                      <option value="1">B.Sc(Engineering/Architecture)</option><option value="2">B.Sc(Agricultural Science)</option><option value="3">M.B.B.S./B.D.S</option><option value="4">Honors</option><option value="5">Pass Course</option><option value="6">Fazil</option><option value="8">Graduation Equivalent</option>
+                      <option value="B.Sc(Engineering/Architecture)">B.Sc(Engineering/Architecture)</option><option value="B.Sc(Agricultural Science)">B.Sc(Agricultural Science)</option><option value="M.B.B.S./B.D.S">M.B.B.S./B.D.S</option><option value="Honors">Honors</option><option value="Pass Course">Pass Course</option><option value="Fazil">Fazil</option><option value="Graduation Equivalent">Graduation Equivalent</option>
                     </select>
        </div>
      </div>
-
+     
 </div>
 <div class="col-md-4"> 
 <div class="row"> 
        <div class="col-md-6"><h5> Subject / Degree</h5> </div>
-       <div class="col-md-6"> 
+       <div class="col-md-6" id="dgreesub"> 
    
-        <select name="subject1" class="form-control" id="subject1">
-          <option value="0"selected="selected">Select One</option>
-          <option value="1">Science</option><option value="2">Humanities</option><option value="3">Business Studies</option><option value="12">Agriculture Technology</option><option value="13">Architecture and Interior Design Technology</option><option value="15">Automobile Technology</option><option value="16">Civil Technology</option><option value="20">Computer Science & Technology</option><option value="21">Chemical Technology</option><option value="22">Electrical Technology</option><option value="23">Data Telecommunication and Network Technology</option><option value="24">Electrical and Electronics Technology</option><option value="27">Environmental Technology</option><option value="31">Instrumentation & Process Control Technology</option><option value="32">Mechanical Technology</option><option value="34">Mechatronics Technology</option><option value="36">Power Technology</option><option value="38">Refregeration & Air Conditioning Technology</option><option value="41">Telecommunication Technology</option><option value="42">Electronics Technology</option><option value="43">Library Science</option><option value="44">Survey</option><option value="45">General Mechanics</option><option value="46">Firm Machinery</option><option value="47">Textile Technology</option><option value="99">Others</option>
-        </select>
        </div>
      </div>
 
@@ -890,7 +886,7 @@ if (point==='four'|| point==='five') {
 <div class="row"> 
        <div class="col-md-6"><h5> Roll No</h5> </div>
        <div class="col-md-6"> 
-         <input class="form-control form-control-md" type="text" require>
+         <input class="form-control form-control-md" type="text">
        </div>
      </div>
 
@@ -1061,4 +1057,5 @@ if (point==='four'|| point==='five') {
 
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="custom.js"></script>
 </html>
